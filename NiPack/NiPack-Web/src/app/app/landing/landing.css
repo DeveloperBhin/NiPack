@@ -1,0 +1,195 @@
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 60vh;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Fullscreen Background Video */
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;   /* IMPORTANT */
+  z-index: 0;
+}
+
+/* Dark overlay */
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 1;
+}
+
+/* Text content */
+.hero-overlay {
+  position: relative;
+  z-index: 2;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  max-width: 800px;
+}
+
+.hero-overlay h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero-overlay p {
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+}
+
+.hero-overlay button {
+  padding: 12px 25px;
+  font-size: 1rem;
+  background-color: #ff6600;
+  border: none;
+  border-radius: 3rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.hero-overlay button:hover {
+  background-color: #ffdd33;
+}
+
+/* Header */ 
+.header {
+   display: flex;
+    justify-content: space-between; 
+    align-items: center;
+     padding: 1rem 2rem; 
+     background-color: #1a1a1a; 
+     color: white;
+     } 
+     .header .logo
+      { font-size: 1.5rem; 
+        font-weight: bold; 
+      } 
+      .header .nav a { 
+        margin-left: 1.5rem; 
+        color: white; 
+        text-decoration: none; 
+        font-weight: 500; 
+        transition: color 0.3s; 
+      } 
+      .header .nav a:hover {
+         color: #ff4a8d; 
+        }
+
+        /* Footer */ 
+        .footer { 
+          text-align: center;
+           padding: 1rem; 
+           background-color: #1a1a1a;
+            color: white;
+             margin-top: 2rem;
+             }
+
+
+             .why {
+  padding: 80px 20px;
+  background: #f9f9f9;
+  text-align: center;
+}
+
+.why h2 {
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+
+.why-card {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.why-card:hover {
+  transform: translateY(-10px);
+}
+
+.problem {
+  padding: 80px 20px;
+  background: #111;
+  color: white;
+  text-align: center;
+}
+
+.problem h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.problem p {
+  max-width: 700px;
+  margin: auto;
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.how {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.how h2 {
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+}
+
+.how-steps {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.step {
+  max-width: 250px;
+}
+
+.step span {
+  display: inline-block;
+  background: #ff6600;
+  color: white;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 50%;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.cta {
+  padding: 80px 20px;
+  background: #ff6600;
+  text-align: center;
+  color: white;
+}
+
+.cta button {
+  margin-top: 20px;
+  padding: 15px 40px;
+  border: none;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  cursor: pointer;
+}

@@ -1,0 +1,104 @@
+<header class="header">
+    <div class="logo"> Ni Pack</div>
+    <nav class="nav">
+        <a class="">About</a>
+        <a class="">Pack</a>
+        <a class="">Services</a>
+        <a class="">Contacts</a>
+        <a class="">Pricing</a>
+    </nav>
+</header>
+
+<section class="hero">
+<!-- 
+      <video autoplay
+    muted
+    loop
+    playsinline class = "bg-video">
+        <source src="/home.mp4" type="video/mp4">
+        </video> -->
+
+        <video
+  #bgVideo
+  class="bg-video"
+  src="/home.mp4"
+  autoplay
+  muted
+  loop
+  playsinline>
+</video>
+    <div class="hero-overlay">
+        <h1>Send your Package safely with NiPack</h1>
+        <p>Find available buses, track your Package and notifications</p>
+        <button (click)="bookPackage()">Book Now</button>
+    </div>
+    
+</section>
+<section class="why">
+  <div class="container">
+    <h2>Why Choose NiPack?</h2>
+    <div class="why-grid">
+      <div class="why-card">
+        <h3>Fast Delivery</h3>
+        <p>Connect with available buses instantly and send packages the same day.</p>
+      </div>
+
+      <div class="why-card">
+        <h3>Secure Handling</h3>
+        <p>Your package is tracked and verified at every step of the journey.</p>
+      </div>
+
+      <div class="why-card">
+        <h3>Real-Time Tracking</h3>
+        <p>Track your shipment live and receive instant notifications.</p>
+      </div>
+
+      <div class="why-card">
+        <h3>Affordable Pricing</h3>
+        <p>Transparent pricing with no hidden costs.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="problem">
+  <div class="container problem-content">
+    <div>
+      <h2>What Problem Does NiPack Solve?</h2>
+      <p>
+        Traditional package delivery can be slow, expensive, and unreliable.
+        NiPack connects senders with available transport providers instantly,
+        making delivery faster, cheaper, and smarter.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="how">
+  <h2>How It Works</h2>
+  <div class="how-steps">
+    <div class="step">
+      <span>1</span>
+      <h3>Book a Package</h3>
+      <p>Enter pickup and destination details.</p>
+    </div>
+
+    <div class="step">
+      <span>2</span>
+      <h3>Choose Transport</h3>
+      <p>Select from available buses and drivers.</p>
+    </div>
+
+    <div class="step">
+      <span>3</span>
+      <h3>Track in Real-Time</h3>
+      <p>Monitor your shipment until delivery.</p>
+    </div>
+  </div>
+</section>
+<section class="cta">
+  <h2>Ready to Send Your Package?</h2>
+  <button (click)="bookPackage()">Get Started Now</button>
+</section>
+<footer class="footer">
+  <p>&copy; 2026 Ni Pack. All rights reserved.</p>
+</footer>
