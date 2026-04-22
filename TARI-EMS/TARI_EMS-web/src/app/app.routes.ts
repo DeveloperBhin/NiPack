@@ -68,7 +68,50 @@ export const routes: Routes = [
         loadComponent: () =>
           import('./component/gallery/gallery')
             .then(m => m.Gallery)
+      },
+      {
+        path: 'admin',
+        loadComponent: () =>
+          import('./component/admin/admin/admin')
+            .then(m => m.Admin)
+      },
+       {
+        path: 'admin/addevent',
+        loadComponent: () =>
+          import('./component/admin/addevent/addevent')
+            .then(m => m.Addevent)
+      },
+      {
+        path: 'admin/admin',
+        loadComponent: () =>
+          import('./component/admin/admin/admin')
+            .then(m => m.Admin)
+      },
+      {
+        path: 'admin/eventdetails',
+        loadComponent: () =>
+          import('./component/admin/eventdetails/eventdetails')
+            .then(m => m.Eventdetails)
+      },
+      {
+        path: 'admin/eventregistered',
+        loadComponent: () =>
+          import('./component/admin/eventregistered/eventregistered')
+            .then(m => m.Eventregistered)
+      },
+      {
+        path: 'admin/eventregistered-details',
+        loadComponent: () =>
+          import('./component/admin/eventregistered-details/eventregistered-details')
+            .then(m => m.EventregisteredDetails)
+      },
+      {
+        path: 'admin/eventgallery',
+        loadComponent: () =>
+          import('./component/admin/event-gallery/event-gallery')
+            .then(m => m.EventGallery)
       }
+
     ]
   },
 
