@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 import { ActivatedRoute } from '@angular/router';
+import { Observable, map } from 'rxjs';
 
 
 @Component({
@@ -12,33 +13,43 @@ import { ActivatedRoute } from '@angular/router';
   styleUrl: './details.css',
   standalone: true,
 })
+
 export class Details implements OnInit {
 
+  events$!: Observable<any>;
 
+  constructor(
+    private route: ActivatedRoute,
+    private http: HttpClient,
+    private router: Router
+  ) {}
 
+  ngOnInit() {
+    const id = this.route.snapshot.paramMap.get('id');
 
+    this.events$ = this.http.get<any>(
+      `https://41.59.225.78:8443/api/admin/events/${id}`
+    );
+  }
 
+  showEvents = false;
 
-event: any;
+  toggleEvents() {
+    this.showEvents = !this.showEvents;
+  }
 
-constructor(
-  private route: ActivatedRoute,
-  private http: HttpClient,
-  private router: Router
-) {}
-
-ngOnInit() {
-  const id = this.route.snapshot.paramMap.get('id');
-
-  this.http.get(`http://localhost:8080/api/admin/events/${id}`)
-    .subscribe(res => {
-      this.event = res;
-      console.log("Event loaded:", res);
-    });
+  goToRegister(event: any) {
+    this.router.navigate(['/register', event.id]);
+  }
 }
-goToRegister(event: any) {
-  this.router.navigate(['/register', event.id]);
-}
-}
+
+
+
+
+
+    
+
+
+ 
 
 
